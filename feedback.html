@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback - Khosyi Abqory Prayata</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Buku Tamu & Feedback</h1>
+        <p><a href="index.html">← Kembali ke Beranda</a></p>
+      </header>
+
+      <hr />
+
+      <section class="form-section">
+        <h2>Silakan Tinggalkan Pesan Anda</h2>
+        <p>
+          Masukan dan saran Anda sangat berarti untuk pengembangan website ini.
+        </p>
+        <br />
+
+        <!-- FORM RESPONSIF: 1 kolom mobile, 2 kolom tablet/desktop -->
+        <form
+          action="https://httpbin.org/post"
+          method="POST"
+          class="feedback-form"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap:</label>
+              <input type="text" id="nama" name="nama" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="umur">Umur:</label>
+              <input type="number" id="umur" name="umur" min="10" max="100" />
+            </div>
+
+            <div class="form-group">
+              <label for="status">Status:</label>
+              <select id="status" name="status">
+                <option value="">-- Pilih Status --</option>
+                <option value="Pelajar">Pelajar</option>
+                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Guru">Guru</option>
+                <option value="Orang Tua">Orang Tua</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+              <input
+                type="radio"
+                id="laki"
+                name="jenis_kelamin"
+                value="Laki-laki"
+                checked
+              />
+              <label for="laki">Laki-laki</label>
+
+              <input
+                type="radio"
+                id="perempuan"
+                name="jenis_kelamin"
+                value="Perempuan"
+              />
+              <label for="perempuan">Perempuan</label>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Topik yang Menarik:</label>
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                id="biodata"
+                name="topik"
+                value="Biodata"
+              />
+              <label for="biodata">Biodata</label>
+
+              <input type="checkbox" id="galeri" name="topik" value="Galeri" />
+              <label for="galeri">Galeri</label>
+
+              <input type="checkbox" id="jadwal" name="topik" value="Jadwal" />
+              <label for="jadwal">Jadwal</label>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="pesan">Pesan & Kesan:</label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="6"
+              placeholder="Tuliskan pesan atau kesan Anda di sini..."
+            ></textarea>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" class="btn-submit">Kirim Pesan</button>
+            <button type="reset" class="btn-reset">Reset Form</button>
+          </div>
+        </form>
+      </section>
+
+      <hr />
+
+      <section class="info-box">
+        <h3>ℹ️ Informasi</h3>
+        <p>
+          Form ini menggunakan <b>POST method</b> dan dikirim ke
+          <u>https://httpbin.org/post</u> untuk keperluan testing. Data yang
+          Anda kirim akan ditampilkan dalam format JSON sebagai bukti pengiriman
+          berhasil.
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          <a href="jadwal.html">← Jadwal</a> | <a href="index.html">Beranda</a>
+        </p>
+        <br />
+        <p>&copy; 2025 Khosyi Abqory Prayata</p>
+      </footer>
+    </div>
+  </body>
+</html>

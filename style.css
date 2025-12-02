@@ -1,0 +1,496 @@
+/* === MOBILE FIRST - DEFAULT STYLES (≤ 599px) === */
+
+* { /* atur semua elemen di halaman */
+  margin: 0; /* hilangin jarak luar default */
+  padding: 0; /* hilangin jarak dalam default */
+  box-sizing: border-box; /* biar ukuran elemen tetap pas walau dikasih padding/border */
+}
+
+body { /* bagian utama halaman web */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* jenis huruf utama */
+  line-height: 1.6; /* jarak antar baris teks */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* latar belakang gradasi biru ke ungu */
+  color: #333; /* warna teks abu gelap */
+  padding: 10px; /* jarak tepi isi halaman */
+  min-height: 100vh; /* tinggi minimal 1 layar penuh */
+}
+
+.container { /* wadah utama isi web */
+  max-width: 1200px; /* lebar maksimal wadah */
+  margin: 0 auto; /* biar posisi di tengah */
+  background: white; /* warna latar putih biar bersih */
+  padding: 20px; /* jarak isi ke tepi 20px */
+  border-radius: 15px; /* ujung kotak dibuletin dikit */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* efek bayangan biar keliatan timbul */
+}
+
+/* Header */
+header { /* bagian kepala halaman */
+  text-align: center; /* teks di tengah */
+  margin-bottom: 20px; /* jarak bawah header */
+}  
+
+header h1 { /* judul utama di header */
+  color: #667eea; /* warna teks biru */
+  font-size: 1.8em; /* ukuran huruf agak besar */
+  margin-bottom: 10px; /* jarak bawah judul */
+}
+
+.logo { /* gambar logo */
+  max-width: 120px; /* ukuran maksimal logo */
+  margin-bottom: 15px; /* jarak bawah logo */
+  border-radius: 10px; /* sudut logo agak bulet */
+}
+/* Avatar */
+.avatar-section { /* tempat foto profil */
+  text-align: center; /* posisi di tengah */
+  margin: 20px 0; /* jarak atas dan bawah */
+}
+
+.avatar { /* gaya untuk foto profil */
+  width: 120px; /* lebar foto */
+  height: 120px; /* tinggi foto */
+  border-radius: 50%; /* biar bentuknya bulat */
+  border: 5px solid #667eea; /* garis pinggir warna biru */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* efek bayangan lembut */
+}
+
+/* NAVIGASI FLEXBOX - Mobile: 1 kolom atau 2 item per baris */
+.main-nav { /* bagian navigasi utama */
+  margin: 20px 0; /* jarak atas dan bawah */
+}
+
+.main-nav h2 { /* judul di bagian navigasi */
+  color: #764ba2; /* warna teks ungu */
+  margin-bottom: 15px; /* jarak bawah judul */
+  border-left: 5px solid #667eea; /* garis vertikal di sisi kiri */
+  padding-left: 15px; /* jarak teks dari garis kiri */
+}
+
+.nav-menu { /* daftar menu navigasi */
+  list-style: none; /* hilangin tanda titik di list */
+  display: flex; /* pakai sistem flexbox biar rapi */
+  flex-wrap: wrap; /* biar pindah baris kalau sempit */
+  gap: 10px; /* jarak antar item menu */
+}
+
+.nav-menu li { /* setiap item menu */
+  flex: 1 1 calc(50% - 10px); /* dua item per baris di HP */
+  min-width: 140px; /* ukuran minimal tombol */
+}
+
+.nav-menu li a { /* link di menu */
+  display: block; /* seluruh area bisa diklik */
+  padding: 12px 15px; /* ruang dalam tombol */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* warna gradasi biru ke ungu */
+  color: white; /* teks putih biar kontras */
+  text-decoration: none; /* hilangin garis bawah */
+  border-radius: 8px; /* ujung tombol agak bulet */
+  transition: transform 0.3s, box-shadow 0.3s; /* animasi halus saat hover */
+  text-align: center; /* teks di tengah */
+}
+
+.nav-menu li a:hover { /* efek pas mouse diarahkan */
+  transform: translateY(-3px); /* tombol naik dikit */
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); /* tambah bayangan pas hover */
+}
+
+/* Links */
+a { /* untuk semua link di halaman */
+  color: #667eea; /* warna biru biar keliatan jelas */
+  text-decoration: none; /* hilangin garis bawah */
+  transition: color 0.3s; /* efek halus pas berubah warna */
+}
+
+a:hover { /* pas kursor diarahkan ke link */
+  color: #764ba2; /* berubah jadi ungu */
+  text-decoration: underline; /* muncul garis bawah */
+}
+
+/* HR */
+hr { /* garis pemisah antar bagian */
+  border: none; /* hilangin garis bawaan */
+  border-top: 2px solid #e0e0e0; /* bikin garis tipis abu muda */
+  margin: 25px 0; /* jarak atas dan bawah */
+}
+
+/* Box Sections */
+.intro-box,
+.hobby-box,
+.dream-box,
+.quote-box,
+.note-box,
+.info-box { /* kotak-kotak isi halaman (misal biodata, hobi, cita-cita, dll) */
+  background: #f8f9fa; /* warna latar abu muda */
+  padding: 20px; /* jarak isi ke tepi kotak */
+  border-radius: 10px; /* sudut dibuletin */
+  margin: 20px 0; /* jarak antar kotak */
+  border-left: 5px solid #667eea; /* garis warna biru di sisi kiri */
+}
+
+.intro-box h3,
+.hobby-box h3,
+.dream-box h3,
+.quote-box h4,
+.note-box h3,
+.info-box h3 { /* judul di dalam kotak */
+  color: #764ba2; /* warna ungu biar beda dari isi teks */
+  margin-bottom: 10px; /* jarak bawah judul */
+}
+/* PROFIL SECTION - Mobile: Stack vertikal */
+.profile-section { /* bagian utama profil */
+  display: flex; /* pakai flexbox biar bisa atur posisi */
+  flex-direction: column; /* susun dari atas ke bawah di HP */
+  gap: 20px; /* jarak antar elemen */
+  margin: 20px 0; /* jarak atas bawah */
+  align-items: center; /* biar rata tengah */
+}
+
+.profile-photo { /* tempat foto profil utama */
+  text-align: center; /* posisi tengah */
+}
+
+.photo-main { /* gaya untuk foto utama */
+  width: 100%; /* lebar penuh */
+  max-width: 200px; /* tapi dibatasi maksimal 200px */
+  height: auto; /* tinggi otomatis sesuai gambar */
+  object-fit: cover; /* gambar dipotong biar proporsional */
+  border-radius: 15px; /* sudut foto bulet halus */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* efek bayangan lembut */
+}
+
+.profile-info { /* bagian teks biodata */
+  width: 100%; /* lebar penuh */
+}
+
+.profile-info h2 { /* judul dalam biodata */
+  color: #667eea; /* warna biru */
+  margin-bottom: 10px; /* jarak bawah */
+  border-left: 5px solid #764ba2; /* garis ungu di kiri */
+  padding-left: 15px; /* jarak teks dari garis */
+}
+
+/* Lists */
+ul,
+ol { /* untuk daftar (list) hobi, data, dll */
+  margin-left: 25px; /* jarak dari kiri */
+}
+
+ul li,
+ol li { /* setiap item list */
+  margin: 8px 0; /* jarak antar item */
+}
+/* GALERI FLEXBOX - Mobile: 1 kolom */
+.gallery-flex { /* wadah untuk semua foto di galeri */
+  display: flex; /* pakai flexbox biar rapi */
+  flex-wrap: wrap; /* biar foto bisa turun ke baris baru */
+  gap: 20px; /* jarak antar foto */
+  margin: 20px 0; /* jarak atas dan bawah */
+}
+
+.gallery-item { /* tiap foto di galeri */
+  flex: 1 1 100%; /* tampil 1 kolom di HP */
+  text-align: center; /* posisi tengah */
+}
+
+.gallery-img { /* gaya untuk foto */
+  width: 100%; /* lebar penuh */
+  height: 200px; /* tinggi tetap biar rapi */
+  object-fit: cover; /* potong gambar biar proporsional */
+  border-radius: 15px; /* sudut foto bulet halus */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* efek bayangan lembut */
+  transition: transform 0.3s; /* animasi pas dihover */
+}
+
+.gallery-img:hover { /* efek pas kursor di atas foto */
+  transform: scale(1.05); /* foto agak diperbesar sedikit */
+}
+
+.caption { /* teks keterangan foto */
+  margin-top: 10px; /* jarak atas */
+  color: #666; /* warna abu muda */
+  font-size: 0.9em; /* ukuran font sedikit kecil */
+}
+/* Video Section */
+.video-section { /* tempat buat video */
+  text-align: center; /* posisi tengah */
+  margin: 30px 0; /* jarak atas bawah */
+}
+
+/* TABEL RESPONSIF - Mobile: overflow-x auto */
+.schedule-section { /* bagian tabel jadwal */
+  margin: 20px 0; /* jarak atas bawah */
+}
+
+.table-wrapper { /* pembungkus tabel biar bisa geser di HP */
+  overflow-x: auto; /* aktifin scroll ke samping */
+  -webkit-overflow-scrolling: touch; /* biar halus di HP */
+}
+
+.schedule-table { /* gaya untuk tabel */
+  width: 100%; /* lebar penuh */
+  min-width: 600px; /* biar tabel gak kekecilan */
+  border-collapse: collapse; /* gabung garis tabel */
+  margin: 20px 0; /* jarak atas bawah */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* efek bayangan lembut */
+}
+
+.schedule-table thead { /* bagian kepala tabel */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* gradasi biru ke ungu */
+  color: white; /* teks putih biar jelas */
+}
+
+.schedule-table th,
+.schedule-table td { /* sel tabel */
+  border: 1px solid #ddd; /* garis abu tipis */
+  padding: 12px; /* jarak isi sel */
+  text-align: center; /* teks di tengah */
+}
+
+.schedule-table tbody tr:nth-child(even) { /* baris genap beda warna */
+  background-color: #f8f9fa; /* abu muda */
+}
+
+.schedule-table tbody tr:hover { /* pas diarahkan mouse */
+  background-color: #e9ecef; /* abu lebih terang */
+}
+/* FORM RESPONSIF - Mobile: 1 kolom */
+.form-section { /* bagian formulir */
+  margin: 20px 0; /* jarak atas bawah */
+}
+
+.feedback-form { /* kotak utama form */
+  background: #f8f9fa; /* warna abu muda */
+  padding: 25px; /* jarak isi ke tepi */
+  border-radius: 10px; /* ujung kotak bulet */
+  border-left: 5px solid #667eea; /* garis biru di kiri */
+}
+
+.form-row { /* baris di dalam form */
+  display: flex; /* pakai flex biar bisa diatur baris */
+  flex-direction: column; /* susun dari atas ke bawah di HP */
+  gap: 20px; /* jarak antar input */
+  margin-bottom: 20px; /* jarak antar kelompok input */
+}
+
+.form-group { /* tiap kelompok input */
+  flex: 1; /* biar bisa lebar penuh */
+}
+
+.form-group.full-width { /* kalau butuh 1 baris penuh */
+  margin-bottom: 20px;
+}
+
+.form-group label { /* teks penjelas di atas input */
+  display: block; /* tampil di baris sendiri */
+  margin-bottom: 8px; /* jarak bawah */
+  color: #333; /* warna abu gelap */
+  font-weight: bold; /* teks tebal biar jelas */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea { /* semua input form */
+  width: 100%; /* isi penuh lebar kolom */
+  padding: 10px; /* jarak isi dalam */
+  border: 2px solid #ddd; /* garis abu tipis */
+  border-radius: 8px; /* ujung input bulet */
+  font-size: 1em; /* ukuran teks normal */
+  transition: border-color 0.3s; /* animasi halus pas difokus */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { /* pas diklik/aktif */
+  outline: none; /* hilangin garis biru bawaan */
+  border-color: #667eea; /* ubah warna garis jadi biru */
+}
+
+.radio-group,
+.checkbox-group { /* untuk pilihan radio & checkbox */
+  display: flex; /* sejajar */
+  gap: 20px; /* jarak antar opsi */
+  flex-wrap: wrap; /* bisa turun baris */
+}
+
+.radio-group label,
+.checkbox-group label { /* teks di sebelah tombol pilihan */
+  font-weight: normal; /* gak usah tebal */
+  margin-left: 5px; /* jarak teks dari tombol */
+}
+
+.button-group { /* tempat tombol kirim dan reset */
+  display: flex;
+  flex-direction: column; /* susun ke bawah di HP */
+  gap: 15px; /* jarak antar tombol */
+  margin-top: 20px;
+}
+
+.btn-submit,
+.btn-reset { /* tombol utama */
+  padding: 12px 30px; /* ukuran tombol */
+  border: none; /* tanpa garis luar */
+  border-radius: 8px; /* ujung bulet */
+  font-size: 1em; /* teks normal */
+  cursor: pointer; /* jadi tangan pas diarahkan */
+  transition: transform 0.3s, box-shadow 0.3s; /* efek halus pas hover */
+}
+
+.btn-submit { /* tombol kirim */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* warna gradasi */
+  color: white; /* teks putih */
+}
+
+.btn-reset { /* tombol hapus/reset */
+  background: #e0e0e0; /* abu terang */
+  color: #333; /* teks abu gelap */
+}
+
+.btn-submit:hover,
+.btn-reset:hover { /* pas dihover */
+  transform: translateY(-3px); /* tombol naik dikit */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* tambah bayangan */
+}
+/* Footer */
+footer { /* bagian bawah halaman */
+  text-align: center; /* teks di tengah */
+  margin-top: 30px; /* jarak atas */
+  padding-top: 20px; /* jarak isi ke atas */
+  border-top: 2px solid #e0e0e0; /* garis abu di atas */
+  color: #666; /* warna abu muda */
+}
+
+/* === TABLET (600px - 1023px) === */
+@media (min-width: 600px) and (max-width: 1023px) {
+  body { /* di tablet padding lebih besar */
+    padding: 20px;
+  }
+
+  .container {
+    padding: 30px; /* isi container lebih lega */
+  }
+
+  header h1 {
+    font-size: 2.2em; /* judul lebih besar */
+  }
+
+  .logo {
+    max-width: 150px; /* logo agak gedean */
+  }
+
+  /* Navigasi: menu dirapikan */
+  .nav-menu li {
+    flex: 0 1 auto;
+    min-width: 150px;
+  }
+
+  /* Profil: dua kolom */
+  .profile-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    flex-shrink: 0;
+  }
+
+  .photo-main {
+    max-width: 200px;
+  }
+
+  /* Galeri: 2 kolom */
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  /* Form: dua kolom */
+  .form-row {
+    flex-direction: row;
+  }
+
+  .button-group {
+    flex-direction: row;
+  }
+
+  .btn-submit,
+  .btn-reset {
+    flex: 1; /* tombol sama besar */
+  }
+}
+
+/* === DESKTOP (≥ 1024px) === */
+@media (min-width: 1024px) {
+  body {
+    padding: 40px; /* ruang lebih besar di layar besar */
+  }
+
+  .container {
+    padding: 40px;
+  }
+
+  header h1 {
+    font-size: 2.5em; /* judul paling besar di desktop */
+  }
+
+  .logo {
+    max-width: 180px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Navigasi: di tengah dan efek hover lebih jelas */
+  .nav-menu {
+    justify-content: center;
+  }
+
+  .nav-menu li {
+    flex: 0 1 auto;
+    min-width: 180px;
+  }
+
+  .nav-menu li a:hover {
+    transform: translateY(-5px); /* naik sedikit lebih tinggi */
+  }
+
+  /* Profil dua kolom dengan jarak lebih besar */
+  .profile-section {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .photo-main {
+    max-width: 250px;
+  }
+
+  /* Galeri: 3–4 kolom */
+  .gallery-item {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+  }
+
+  /* Tabel tampil penuh */
+  .schedule-table {
+    min-width: auto;
+  }
+
+  /* Form dua kolom, tombol sejajar */
+  .form-row {
+    flex-direction: row;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .btn-submit,
+  .btn-reset {
+    flex: 0 1 auto;
+    min-width: 150px;
+  }
+}
